@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  background-color: var(--mainColor);
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+}
+.followme,
+.linkedin,
+.Github {
+  height: 60px;
+  width: 60px;
+  margin-left: 25px;
+  margin-right: 25px;
+}

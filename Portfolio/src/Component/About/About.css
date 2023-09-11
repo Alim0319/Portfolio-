@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&family=Delicious+Handrawn&family=Spectral:ital,wght@0,200;0,300;0,400;1,200;1,400&display=swap");
+.about {
+  background-color: var(--headerColor);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.about-me {
+  font-family: "Spectral", serif;
+  font-size: 1.5rem;
+  text-indent: 50px;
+  line-height: 1.6;
+  position: flex;
+  max-width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  color: var(--mainColorLight);
+  margin-left: 20px;
+}
+.about h1 {
+  font-family: "Spectral", serif;
+  font-size: 38px;
+  color: var(--secondaryColor);
+  text-align: center;
+
+  position: relative;
+}
+:root {
+  --mainColor: #29335c;
+  --mainColorLight: #5767aa;
+  --secondaryColor: orange;
+  --textColor: #ffff;
+  --headerColor: #ffff;
+}
+
+.code {
+  max-width: 430px;
+  vertical-align: top;
+  flex-shrink: 0;
+  margin-top: 1px;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-me,
+  .about h1 {
+    display: block;
+    max-width: 100%;
+  }
+  .code {
+    width: 300px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 667px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-me,
+  .about h1 {
+    display: block;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .code {
+    width: 200px;
+    height: auto;
+  }
+}

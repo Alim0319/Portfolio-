@@ -1,0 +1,62 @@
+.mySkills1 {
+  display: grid;
+  min-height: 100vh;
+}
+
+.mySkills1 h1 {
+  font-family: "Spectral", serif;
+  font-size: 38px;
+  color: var(--secondaryColor);
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  background-color: white;
+  grid-gap: 15px;
+}
+
+.grid-item {
+  position: relative;
+
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 10px;
+
+  transition: filter 0.3s ease-in;
+}
+.grid-item img :not(.selected):hover img {
+  filter: blur(10px);
+
+  /* Remove blur effect for non-selected items on hover */
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  /* Apply blur effect to all images */
+}
+
+.grid-item.selected img {
+  filter: none; /* Remove blur effect for selected item's image */
+}
+
+.text {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+}

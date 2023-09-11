@@ -1,0 +1,88 @@
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-height: 100vh;
+}
+
+.contact h1 {
+  font-family: "Spectral", serif;
+  font-size: 38px;
+  color: var(--secondaryColor);
+  text-align: center;
+}
+
+.icon {
+  color: var(--secondaryColor);
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  font-size: 20px;
+  margin-right: 15px;
+}
+.container {
+  width: 400px;
+  position: relative;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .box {
+  width: 200px;
+}
+
+.box .info {
+  color: black;
+  font-size: 1rem;
+}
+
+.contactForum {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--mainColorLight);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.contactGift {
+  width: 100%;
+  max-width: 500px;
+  align-items: center;
+  justify-content: center;
+}
+#message {
+  height: 100px;
+  align-items: first baseline;
+  text-align: start;
+}
