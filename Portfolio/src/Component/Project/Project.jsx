@@ -22,7 +22,7 @@ function Projects() {
               <FaGithub className="icon" />
             </a>
             <a
-              href="https://benevolent-entremet-e6cb36.netlify.app/"
+              href="https://alim0319.github.io/Weather/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -46,7 +46,7 @@ function Projects() {
               <FaGithub className="icon" />
             </a>
             <a
-              href="https://serene-horse-56777b.netlify.app/"
+              href="https://alim0319.github.io/Login/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -69,7 +69,7 @@ function Projects() {
               <FaGithub className="icon" />
             </a>
             <a
-              href="https://taupe-croissant-3fc0f8.netlify.app/"
+              href="https://alim0319.github.io/PlantProject/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -88,7 +88,7 @@ function Projects() {
             <FaCss3 className="icon" />
             <FaJs className="icon" />
             <a
-              href="https://github.com/Alim0319/Code/blob/master/index.html"
+              href="https://alim0319.github.io/Code/"
               target="_blank"
               rel="noopener noreferrer"
             >
