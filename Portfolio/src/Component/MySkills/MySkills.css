@@ -50,10 +50,12 @@
 .text {
   position: absolute;
   bottom: -25px;
+  top: 60px;
   left: 0;
   width: 100%;
   text-align: center;
   opacity: 0;
+  color: var(--secondaryColor);
   transition: opacity 0.3s ease-in-out;
 }
 

@@ -39,11 +39,7 @@ function Navbar() {
             </a>
             <ul className="dropdown-menu">
               <li>
-                <a
-                  href="CV_Alim .pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="CV_Alim .pdf" target="_blank">
                   Resume
                 </a>
               </li>
