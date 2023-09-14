@@ -2,8 +2,8 @@ import Navbar from "./Component/navbar/navbar";
 import HomePage from "./Component/HomePage/Homepage";
 import About from "./Component/About/About";
 import Projects from "./Component/Project/Project";
-import MySkills1 from "./Component/MySkills/MySkills1";
-import Contact from "./Component/ContactaPage/contact";
+import MySkills1 from "./Component/MySkills/MySkills";
+import Contact from "./Component/ContactaPage/ContactaPage";
 import Footer from "./Component/footer/footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
