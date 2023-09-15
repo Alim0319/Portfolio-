@@ -1,4 +1,4 @@
-import { FaBars, FaTimes, FaAngleDown, FaHome } from "react-icons/fa";
+import { FaBars, FaTimes, FaHome } from "react-icons/fa";
 import { useRef } from "react";
 
 import "../styles/main.css";
@@ -33,17 +33,9 @@ function Navbar() {
             <a href="Project">Project</a>
           </li>
           <li className="dropdown">
-            <a href="#" className="dropdown-icon">
+            <a href="CV_Alim .pdf" target="_blank">
               Download
-              <FaAngleDown />
             </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="CV_Alim .pdf" target="_blank">
-                  Resume
-                </a>
-              </li>
-            </ul>
           </li>
           <li>
             <a href="Contact">Contact</a>

@@ -70,7 +70,7 @@ a:hover {
 }
 header {
   height: 80px;
-  position: relative;
+  /*position: relative;*/
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
@@ -78,7 +78,6 @@ header {
   justify-content: space-between;
   background-color: var(--mainColor);
   color: var(--textColor);
-  z-index: 1;
 }
 
 header .nav-btn {
@@ -102,20 +101,22 @@ nav .nav-close-btn {
   right: 1rem;
   z-index: 20;
 }
+
 .nav-list {
   list-style: none;
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
 }
-.dropdown a {
+
+/*.dropdown a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-.dropdown {
-  position: relative;
-}
+}*/
 
-.dropdown-menu {
+/*.dropdown-menu {
   display: none;
   position: absolute;
   top: calc(20px + 10px);
@@ -132,15 +133,20 @@ nav .nav-close-btn {
   display: block;
 }
 .dropdown-menu li {
-  /*padding: 0.5rem 1rem;*/
+  /*padding: 0.5rem 1rem;
 
   left: 10px;
 }
-
-.icon {
+*/
+.nav-list .icon {
   font-size: 2rem;
   color: var(--textColor);
   cursor: pointer;
+  align-items: center;
+  bottom: 10px;
+}
+.nav-list .icon :hover {
+  color: var(--secondaryColor);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -170,8 +176,8 @@ nav .nav-close-btn {
   }
   nav .nav-close-btn {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 0rem;
+    right: 0rem;
   }
   nav a {
     font-size: 1.5 rem;
