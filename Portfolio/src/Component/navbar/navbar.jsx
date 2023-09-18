@@ -1,5 +1,6 @@
 import { FaBars, FaTimes, FaHome } from "react-icons/fa";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 import "../styles/main.css";
 
@@ -12,25 +13,25 @@ function Navbar() {
   return (
     <header>
       <div className="logo">
-        <a href="Home">
+        <Link to="/Home">
           <img src="logo-color.png" alt="Logo" />
-        </a>
+        </Link>
       </div>
       <nav ref={navRef}>
         <ul className="nav-list">
           <li>
-            <a href="Home">
+            <Link to="/Home">
               <FaHome className="icon" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="About">About</a>
+            <Link to="/About">About</Link>
           </li>
           <li>
-            <a href="Skilis">Skilis</a>
+            <Link to="/Skills">Skills</Link>
           </li>
           <li>
-            <a href="Project">Project</a>
+            <Link to="/Project">Project</Link>
           </li>
           <li className="dropdown">
             <a href="CV_Alim .pdf" target="_blank">
@@ -38,7 +39,7 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a href="Contact">Contact</a>
+            <Link to="/Contact">Contact</Link>
           </li>
         </ul>
 
