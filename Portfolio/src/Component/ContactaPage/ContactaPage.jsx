@@ -1,5 +1,6 @@
 import "../ContactaPage/contact.css";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
+import contactImg from "../images/contact.gif";
 
 function Contact() {
   return (
@@ -80,7 +81,7 @@ function Contact() {
             </div>
             <input type="submit" id="button" value="Send Email" />
           </form>
-          <img className="contactGift" src="contact.gif" alt="contact" />
+          <img className="contactGift" src={contactImg} alt="contact" />
         </div>
       </div>
     </div>

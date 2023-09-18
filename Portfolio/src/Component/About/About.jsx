@@ -1,4 +1,5 @@
 import "../About/About.css";
+import codeImg from "../images/coding.gif";
 
 function About() {
   return (
@@ -26,7 +27,7 @@ function About() {
             the boundaries of design and functionality.
           </p>
         </div>
-        <img className="code" src="coding.gif" alt="Coding" />
+        <img className="code" src={codeImg} alt="Coding" />
       </div>
     </header>
   );

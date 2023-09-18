@@ -14,18 +14,15 @@ function App() {
     <Router>
       <React.Fragment>
         <Navbar />
-        <HomePage />
-        <About />
-        <MySkills1 />
-        <Projects />
-        <Contact />
+
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/Portfolio-/home" element={<HomePage />} />
-          <Route path="/Portfolio-/about" element={<About />} />
-          <Route path="/Portfolio-/Skilis" element={<MySkills1 />} />
-          <Route path="/Portfolio-/Project" element={<Projects />} />
-          <Route path="/Portfolio-/contact" element={<Contact />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/logo" element={<HomePage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/Skills" element={<MySkills1 />} />
+          <Route path="/Project" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
 
         <Footer />
