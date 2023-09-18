@@ -5,7 +5,7 @@ import Projects from "./Component/Project/Project";
 import MySkills1 from "./Component/MySkills/MySkills";
 import Contact from "./Component/ContactaPage/ContactaPage";
 import Footer from "./Component/footer/footer";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 import React from "react";
 
