@@ -9,25 +9,27 @@ import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 import React from "react";
 
-function App() {
-  return (
+//import ReactDOM from "react-dom";
+import App from "./App.jsx"; // Import your App component and other necessary components
+
+import { createRoot } from "react-dom";
+
+const root = createRoot(document.getElementById("root"));
+
+root.render(
+  <React.StrictMode>
     <Router>
-      <React.Fragment>
-        <Navbar />
-
-        <Routes>
-          <Route path="/Portfolio-" element={<HomePage />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/Portfolio-/Skilis" element={<MySkills1 />} />
-          <Route path="/Portfolio-/Project" element={<Projects />} />
-          <Route path="/Portfolio-/contact" element={<Contact />} />
-        </Routes>
-
-        <Footer />
-      </React.Fragment>
+      <Navbar />
+      <Routes>
+        <Route path="/Portfolio-" element={<App />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/Portfolio-/Skilis" element={<MySkills1 />} />
+        <Route path="/Portfolio-/Project" element={<Projects />} />
+        <Route path="/Portfolio-/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
     </Router>
-  );
-}
-
-export default App;
+  </React.StrictMode>,
+  document.getElementById("root")
+);

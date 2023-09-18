@@ -1,18 +1,18 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+//import ReactDOM from "react-dom";
+import App from "./App.jsx"; // Import your App component and other necessary components
 
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { createRoot } from "react-dom";
 
-const router = createHashRouter([
-  {
-    path: "/*",
-    element: <App />,
-  },
-]);
+const root = createRoot(document.getElementById("root"));
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router>
+      <Routes>
+        <Route path="/Portfolio-" element={<App />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
