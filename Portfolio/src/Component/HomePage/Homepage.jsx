@@ -1,5 +1,5 @@
 import "./homepage.css";
-import menImg from "../images/men.jpeg";
+import menImg from "../images/man.png";
 import codeImg from "../images/coding.png";
 function HomePage() {
   return (

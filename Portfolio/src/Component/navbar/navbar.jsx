@@ -1,7 +1,7 @@
 import { FaBars, FaTimes, FaHome } from "react-icons/fa";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-//import resume from "../images/CV_Alim.pdf";
+import resume from "../images/CV_Alim .pdf";
 
 import "../styles/main.css";
 
@@ -35,7 +35,7 @@ function Navbar() {
             <Link to="/Project">Project</Link>
           </li>
           <li>
-            <a href="../images/CV_Alim.pdf" download>
+            <a href={resume} download>
               Download
             </a>
           </li>
