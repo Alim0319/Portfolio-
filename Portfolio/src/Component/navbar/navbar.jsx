@@ -32,11 +32,11 @@ function Navbar() {
             <Link to="/Skills">Skills</Link>
           </li>
           <li>
-            <Link to="/Project">Project</Link>
+            <Link to="/Project">Projects</Link>
           </li>
           <li>
             <a href={resume} download>
-              Download
+              Download CV
             </a>
           </li>
           <li>

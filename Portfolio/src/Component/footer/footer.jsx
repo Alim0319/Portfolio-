@@ -20,7 +20,6 @@ function Footer() {
         onClick={() => openLinkInNewTab(linkedinURL)}
       />
 
-      <img className="followme" src="flowme.png" alt="followme" />
       <img
         className="Github"
         src="Github.png"

@@ -4,7 +4,7 @@ import codeImg from "../images/coding.gif";
 function About() {
   return (
     <header className="about">
-      <h1>About to me</h1>
+      <h1>About me</h1>
       <div>
         <div className="about-me">
           <p>

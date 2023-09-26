@@ -14,6 +14,7 @@ function Projects() {
       <h1>My Projects</h1>
       <div className="project-container">
         <div className="project-item">
+          <h2> Waether app</h2>
           <img className="project" src={Wather} alt="weather" />
           <div className="project-icons">
             <FaHtml5 className="icon" />
@@ -39,6 +40,7 @@ function Projects() {
         </div>
 
         <div className="project-item">
+          <h2> Login Page</h2>
           <img className="project" src={Login} alt="Login" />
           <div className="project-icons">
             <FaHtml5 className="icon" />
@@ -61,6 +63,7 @@ function Projects() {
           </div>
         </div>
         <div className="project-item">
+          <h2> Plant project</h2>
           <img className="project" src={SolarSystem} alt="Mercury" />
 
           <div className="project-icons">
@@ -88,6 +91,7 @@ function Projects() {
       <div className="project-container">
         {/* Second row */}
         <div className="project-item">
+          <h2>HTML Portfolio</h2>
           <img className="project" src={Portfolio} alt="Portfolio" />
           <div className="project-icons">
             <FaHtml5 className="icon" />
@@ -110,6 +114,7 @@ function Projects() {
           </div>
         </div>
         <div className="project-item">
+          <h2>Coming to ChessG</h2>
           <img className="project" src={Todo} alt="todo" />
 
           {/* Project 5 content */}
