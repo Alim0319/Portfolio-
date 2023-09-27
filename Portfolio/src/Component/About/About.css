@@ -4,13 +4,14 @@
   background-color: var(--headerColor);
   min-height: 82vh;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   flex-direction: column;
 }
 .about-me {
   font-family: "Spectral", serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-indent: 50px;
   line-height: 1.6;
   position: flex;
@@ -19,14 +20,13 @@
   vertical-align: top;
   color: var(--mainColorLight);
   margin-left: 20px;
-  padding: 30px;
+  margin-top: 30px;
 }
 .about h1 {
   font-family: "Spectral", serif;
   font-size: 38px;
   color: var(--secondaryColor);
   text-align: center;
-  margin-top: 10px;
 }
 
 .code {
@@ -34,6 +34,7 @@
   vertical-align: top;
   flex-shrink: 0;
   margin-top: 1px;
+  margin-left: 50px;
   align-items: center;
   justify-content: center;
 }
