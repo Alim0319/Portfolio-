@@ -17,22 +17,21 @@ h2 {
 }
 
 .project1 {
-  background-color: var(--mainColor);
-  min-height: 100vh;
+  background-color: var(--textColor);
+  min-height: 82vh;
   width: 100%;
   align-items: center;
 }
 .project-container {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   display: grid;
-  gap: 15px;
+  gap: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
 
   border-radius: 5px;
-  margin-bottom: 20px;
 }
 
 .project-icons {

@@ -17,9 +17,3 @@
   display: flex;
   flex-wrap: wrap;
 }
-.linkedin:hover,
-.Github:hover {
-  animation: bounce 0.5s infinite;
-  height: 70px;
-  width: 70px;
-}

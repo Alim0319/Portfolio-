@@ -64,7 +64,7 @@ function MySkills1() {
   const [selectedSkill, setSelectedSkill] = useState(null);
 
   return (
-    <div className="mySkills1">
+    <main className="mySkills1">
       <h1>My Skills</h1>
       <div className="grid-container">
         {skillsData.map((skill, index) => (
@@ -81,7 +81,7 @@ function MySkills1() {
           </div>
         ))}
       </div>
-    </div>
+    </main>
   );
 }
 export default MySkills1;

@@ -4,7 +4,7 @@ import contactImg from "../images/contact.gif";
 
 function Contact() {
   return (
-    <div className="contact">
+    <main className="contact">
       <h1>Contact Me</h1>
       <div>
         <div className="contactForum">
@@ -84,7 +84,7 @@ function Contact() {
           <img className="contactGift" src={contactImg} alt="contact" />
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

@@ -13,15 +13,9 @@
   --mainColorLight: #5767aa;
   --secondaryColor: orange;
   --textColor: #ffff;
-}
-body {
-  width: 100%;
   min-width: 100vh;
   min-height: 100vh;
   align-items: center;
-
-  background-size: cover;
-  background-position: center;
 }
 
 .logo img {
