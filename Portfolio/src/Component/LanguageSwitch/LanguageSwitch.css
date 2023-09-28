@@ -1,0 +1,21 @@
+.language-switch-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Style the select element */
+#languageSwitch {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+}
+
+/* Style the globe icon */
+.globe-icon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}

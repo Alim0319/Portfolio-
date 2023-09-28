@@ -28,8 +28,9 @@ import NPM from "../images/NPM.png";
 import POSTMAN from "../images/POSTMAN.png";
 import react from "../images/react.png";
 import Nodemon from "../images/Nodemon.svg";
+import PropTypes from "prop-types";
 
-function MySkills1() {
+function MySkills1({ selectedLanguage }) {
   const skillsData = [
     { name: "HTML5", img: HTML5 },
     { name: "CSS", img: CSS },
@@ -60,12 +61,20 @@ function MySkills1() {
     { name: "React", img: react },
     { name: "Nodemon", img: Nodemon },
   ];
+  const text = {
+    en: {
+      title: "My Skills",
+    },
+    no: {
+      title: "Mine Ferdigheter",
+    },
+  };
 
   const [selectedSkill, setSelectedSkill] = useState(null);
 
   return (
     <main className="mySkills1">
-      <h1>My Skills</h1>
+      <h1>{text[selectedLanguage].title}</h1>
       <div className="grid-container">
         {skillsData.map((skill, index) => (
           <div
@@ -84,4 +93,7 @@ function MySkills1() {
     </main>
   );
 }
+MySkills1.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+};
 export default MySkills1;

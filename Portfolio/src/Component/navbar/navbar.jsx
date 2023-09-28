@@ -2,11 +2,32 @@ import { FaBars, FaTimes, FaHome } from "react-icons/fa";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import resume from "../images/CV_Alim .pdf";
+import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
+import PropTypes from "prop-types";
 
 import "../styles/main.css";
 
-function Navbar() {
+function Navbar({ selectedLanguage }) {
   const navRef = useRef();
+
+  const text = {
+    en: {
+      home: "Home",
+      about: "About",
+      skills: "Skills",
+      projects: "Projects",
+      resume: "Download Resume",
+      contact: "Contact",
+    },
+    no: {
+      home: "Hjem",
+      about: "Om meg",
+      skills: "Ferdigheter",
+      projects: "Prosjekter",
+      resume: "Last ned CV",
+      contact: "Kontakt",
+    },
+  };
 
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
@@ -26,21 +47,24 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/About">About</Link>
+            <Link to="/About">{text[selectedLanguage].about}</Link>
           </li>
           <li>
-            <Link to="/Skills">Skills</Link>
+            <Link to="/Skills">{text[selectedLanguage].skills}</Link>
           </li>
           <li>
-            <Link to="/Project">Projects</Link>
+            <Link to="/Project">{text[selectedLanguage].projects}</Link>
           </li>
           <li>
             <a href={resume} download>
-              Download CV
+              {text[selectedLanguage].resume}
             </a>
           </li>
           <li>
-            <Link to="/Contact">Contact</Link>
+            <Link to="/Contact">{text[selectedLanguage].contact}</Link>
+          </li>
+          <li>
+            <LanguageSwitch />
           </li>
         </ul>
 
@@ -55,4 +79,7 @@ function Navbar() {
     </header>
   );
 }
+Navbar.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+};
 export default Navbar;

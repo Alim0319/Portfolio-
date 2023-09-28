@@ -1,0 +1,11 @@
+{
+  "greeting": "Portfolio",
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "Skills": "Skills",
+    "Projects": "Projects",
+    "Download Resume": "Download Resume",
+    "Contact": "Contact"
+  }
+}

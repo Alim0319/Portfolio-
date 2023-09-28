@@ -1,11 +1,6 @@
 import "../footer/footer.css";
-
-function openLinkInNewTab(url) {
-  const newWindow = window.open(url, "_blank", "noopener,noreferrer");
-  if (newWindow) {
-    newWindow.opener = null; // Prevents the new window from having access to the opener window
-  }
-}
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { openLinkInNewTab } from "./openLinkInNewTab";
 
 function Footer() {
   const linkedinURL = "https://www.linkedin.com/in/alim-erk-7582b6231/";
@@ -13,20 +8,19 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <img
+      <FaLinkedin
         className="linkedin"
-        src="Linkedin.png"
-        alt="linkedin"
+        size={30} // Set the size of the icon
         onClick={() => openLinkInNewTab(linkedinURL)}
       />
 
-      <img
+      <FaGithub
         className="Github"
-        src="Github.png"
-        alt="Github"
+        size={30} // Set the size of the icon
         onClick={() => openLinkInNewTab(githubURL)}
       />
     </footer>
   );
 }
+
 export default Footer;
