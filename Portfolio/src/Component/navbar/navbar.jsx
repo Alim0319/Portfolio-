@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 
 import "../styles/main.css";
 
-function Navbar({ selectedLanguage }) {
+function Navbar({ selectedLanguage, onLanguageChange }) {
   const navRef = useRef();
 
   const text = {
@@ -64,7 +64,10 @@ function Navbar({ selectedLanguage }) {
             <Link to="/Contact">{text[selectedLanguage].contact}</Link>
           </li>
           <li>
-            <LanguageSwitch />
+            <LanguageSwitch
+              selectedLanguage={selectedLanguage}
+              onLanguageChange={onLanguageChange}
+            />
           </li>
         </ul>
 
@@ -81,5 +84,6 @@ function Navbar({ selectedLanguage }) {
 }
 Navbar.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
+  onLanguageChange: PropTypes.func.isRequired,
 };
 export default Navbar;

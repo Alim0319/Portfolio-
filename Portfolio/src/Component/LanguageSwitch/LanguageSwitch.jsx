@@ -7,10 +7,6 @@ const LanguageSwitch = () => {
 
   const handleLanguageChange = () => {
     setSelectedLanguage(selectedLanguage === "en" ? "no" : "en");
-    console.log(
-      "Language switched to:",
-      selectedLanguage === "en" ? "no" : "en"
-    );
   };
   useEffect(() => {
     console.log("Language switched to:", selectedLanguage);
