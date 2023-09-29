@@ -1,5 +1,5 @@
 import "../About/About.css";
-import codeImg from "../images/coding.gif";
+import codeImg from "../images/skilles.png";
 import PropTypes from "prop-types";
 
 function AboutPage({ selectedLanguage }) {
