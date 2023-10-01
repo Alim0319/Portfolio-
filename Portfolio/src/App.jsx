@@ -2,7 +2,7 @@ import Navbar from "./Component/navbar/navbar";
 import HomePage from "./Component/HomePage/Homepage";
 import About from "./Component/About/About";
 import Projects from "./Component/Project/Project";
-import MySkills1 from "./Component/MySkills/MySkills";
+//import MySkills1 from "./Component/MySkills/MySkills";
 import Contact from "./Component/ContactaPage/ContactaPage";
 import Footer from "./Component/footer/footer";
 
@@ -42,10 +42,10 @@ function App() {
             path="/about"
             element={<About selectedLanguage={selectedLanguage} />}
           />
-          <Route
+          {/*<Route
             path="/Skills"
             element={<MySkills1 selectedLanguage={selectedLanguage} />}
-          />
+  />*/}
           <Route
             path="/Project"
             element={<Projects selectedLanguage={selectedLanguage} />}

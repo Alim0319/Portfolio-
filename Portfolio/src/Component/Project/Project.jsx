@@ -17,7 +17,7 @@ function Projects({ selectedLanguage }) {
       loginPage: "Login Page",
       planetProject: "Planet project",
       htmlPortfolio: "HTML Portfolio",
-      chessGame: "In Progress... Chess Game", // Add translations for your projects
+      chessGame: "In Progress..Chess Game", // Add translations for your projects
     },
     no: {
       title: "Mine Prosjekter",
@@ -25,7 +25,7 @@ function Projects({ selectedLanguage }) {
       loginPage: "Påloggingsside",
       planetProject: "Planetprosjekt",
       htmlPortfolio: "HTML-portefølje",
-      chessGame: "Pågående... Sjakkspill", // Add translations for your projects
+      chessGame: "Pågående..Sjakkspill", // Add translations for your projects
     },
   };
 

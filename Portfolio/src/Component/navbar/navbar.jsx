@@ -49,9 +49,9 @@ function Navbar({ selectedLanguage, onLanguageChange }) {
           <li>
             <Link to="/About">{text[selectedLanguage].about}</Link>
           </li>
-          <li>
+          {/*<li>
             <Link to="/Skills">{text[selectedLanguage].skills}</Link>
-          </li>
+  </li>*/}
           <li>
             <Link to="/Project">{text[selectedLanguage].projects}</Link>
           </li>

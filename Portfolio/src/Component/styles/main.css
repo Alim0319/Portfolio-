@@ -94,7 +94,7 @@ nav .nav-close-btn {
   cursor: pointer;
   opacity: 0;
   top: 1rem;
-  right: 1rem;
+  right: 3rem;
   z-index: 20;
 }
 
@@ -104,6 +104,7 @@ nav .nav-close-btn {
   align-items: center;
   justify-content: flex-end;
   text-align: center;
+  height: 100%;
 }
 
 /*.dropdown a {
