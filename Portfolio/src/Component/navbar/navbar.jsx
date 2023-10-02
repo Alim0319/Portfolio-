@@ -10,7 +10,7 @@ import "../styles/main.css";
 function Navbar({ selectedLanguage, onLanguageChange }) {
   const navRef = useRef();
 
-  const text = {
+  let text = {
     en: {
       home: "Home",
       about: "About",
