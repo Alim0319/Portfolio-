@@ -130,7 +130,11 @@ h2 {
     width: 25px;
     height: 25px;
   }
-
+  .project1 .icon {
+    color: var(--secondaryColorx);
+    height: 10px;
+    width: 10px;
+  }
   .project-item:hover .project-icons {
     transform: translateX(0);
   }
@@ -140,5 +144,8 @@ h2 {
   }
   .project1 h1 {
     font-size: 28px;
+  }
+  .project1 h2 {
+    font-size: 1rem;
   }
 }

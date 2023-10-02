@@ -3,31 +3,14 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import resume from "../images/CV_Alim .pdf";
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
-import PropTypes from "prop-types";
+
+import { useTranslation } from "react-i18next";
 
 import "../styles/main.css";
 
-function Navbar({ selectedLanguage, onLanguageChange }) {
+function Navbar() {
   const navRef = useRef();
-
-  let text = {
-    en: {
-      home: "Home",
-      about: "About",
-      skills: "Skills",
-      projects: "Projects",
-      resume: "Download Resume",
-      contact: "Contact",
-    },
-    no: {
-      home: "Hjem",
-      about: "Om meg",
-      skills: "Ferdigheter",
-      projects: "Prosjekter",
-      resume: "Last ned CV",
-      contact: "Kontakt",
-    },
-  };
+  const { t } = useTranslation();
 
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
@@ -47,27 +30,25 @@ function Navbar({ selectedLanguage, onLanguageChange }) {
             </Link>
           </li>
           <li>
-            <Link to="/About">{text[selectedLanguage].about}</Link>
+            <Link to="/About">{t("translation.about")}</Link>
           </li>
           {/*<li>
             <Link to="/Skills">{text[selectedLanguage].skills}</Link>
   </li>*/}
           <li>
-            <Link to="/Project">{text[selectedLanguage].projects}</Link>
+            <Link to="/Project">{t("translation.Projects")}</Link>
           </li>
           <li>
             <a href={resume} download>
-              {text[selectedLanguage].resume}
+              {" "}
+              {t("translation.Download Resume")}
             </a>
           </li>
           <li>
-            <Link to="/Contact">{text[selectedLanguage].contact}</Link>
+            <Link to="/Contact">{t("translation.Contact")}</Link>
           </li>
           <li>
-            <LanguageSwitch
-              selectedLanguage={selectedLanguage}
-              onLanguageChange={onLanguageChange}
-            />
+            <LanguageSwitch />
           </li>
         </ul>
 
@@ -82,8 +63,5 @@ function Navbar({ selectedLanguage, onLanguageChange }) {
     </header>
   );
 }
-Navbar.propTypes = {
-  selectedLanguage: PropTypes.string.isRequired,
-  onLanguageChange: PropTypes.func.isRequired,
-};
+
 export default Navbar;

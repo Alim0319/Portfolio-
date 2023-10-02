@@ -6,59 +6,40 @@ import Projects from "./Component/Project/Project";
 import Contact from "./Component/ContactaPage/ContactaPage";
 import Footer from "./Component/footer/footer";
 
+import { I18nextProvider } from "react-i18next";
+
+import i18n from "./Component/LanguageSwitch/i18n";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import React from "react";
-import { useState } from "react";
 
 function App() {
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
-  const handleLanguageChange = (newLanguage) => {
-    setSelectedLanguage(newLanguage);
-  };
+  // Function to handle language change
 
   return (
-    <Router>
-      <React.Fragment>
-        <Navbar
-          selectedLanguage={selectedLanguage}
-          onLanguageChange={handleLanguageChange}
-        />
+    <I18nextProvider i18n={i18n}>
+      <Router>
+        <React.Fragment>
+          <Navbar />
 
-        <Routes>
-          <Route
-            path="/Portfolio-"
-            element={<HomePage selectedLanguage={selectedLanguage} />}
-          />
-          <Route
-            path="/logo"
-            element={<HomePage selectedLanguage={selectedLanguage} />}
-          />
-          <Route
-            path="/home"
-            element={<HomePage selectedLanguage={selectedLanguage} />}
-          />
-          <Route
-            path="/about"
-            element={<About selectedLanguage={selectedLanguage} />}
-          />
-          {/*<Route
+          <Routes>
+            <Route path="/Portfolio-" element={<HomePage />} />
+            <Route path="/logo" element={<HomePage />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            {/*<Route
             path="/Skills"
             element={<MySkills1 selectedLanguage={selectedLanguage} />}
   />*/}
-          <Route
-            path="/Project"
-            element={<Projects selectedLanguage={selectedLanguage} />}
-          />
-          <Route
-            path="/Contact"
-            element={<Contact selectedLanguage={selectedLanguage} />}
-          />
-        </Routes>
+            <Route path="/Project" element={<Projects />} />
+            <Route path="/Contact" element={<Contact />} />
+          </Routes>
 
-        <Footer />
-      </React.Fragment>
-    </Router>
+          <Footer />
+        </React.Fragment>
+      </Router>
+    </I18nextProvider>
   );
 }
 

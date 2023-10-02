@@ -95,7 +95,7 @@ nav .nav-close-btn {
   opacity: 0;
   top: 1rem;
   right: 3rem;
-  z-index: 20;
+  z-index: 999;
 }
 
 .nav-list {

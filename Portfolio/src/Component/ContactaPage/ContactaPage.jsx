@@ -1,39 +1,14 @@
 import "../ContactaPage/contact.css";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import contactImg from "../images/contact.gif";
-import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
-function Contact({ selectedLanguage }) {
-  const text = {
-    en: {
-      title: "Contact Me",
-      address: "Address:",
-      phone: "Phone:",
-      email: "E-mail:",
-      fullname: " Full Name *",
-      name: "Name",
-      Message: "Message *",
-      Email: "E-mail *",
-      yourMessage: "yourMessage",
-      buttonText: "Send Email",
-    },
-    no: {
-      title: "Kontakt meg",
-      address: "Adresse:",
-      phone: "Telefon:",
-      email: "E-post:",
-      fullname: " Full Navn *",
-      name: "Navn",
-      Message: "Message *",
-      Email: "E-mail *",
-      yourMessage: "Din tilbakemelding",
-      buttonText: "Send E-post",
-    },
-  };
+function Contact() {
+  const { t } = useTranslation();
 
   return (
-    <main className="contact">
-      <h1>{text[selectedLanguage].title}</h1>
+    <header className="contact">
+      <h1>{t("Contact.title")}</h1>
       <div>
         <div className="contactForum">
           <div className="container">
@@ -42,7 +17,7 @@ function Contact({ selectedLanguage }) {
                 <FaMapMarkerAlt />
               </div>
               <div className="info">
-                <h3>{text[selectedLanguage].address}</h3>
+                <h3>{t("Contact.address")}</h3>
                 <p>
                   Båtstadstein 8B, 4056
                   <br />
@@ -55,7 +30,7 @@ function Contact({ selectedLanguage }) {
                 <FaPhone />
               </div>
               <div className="info">
-                <h3>{text[selectedLanguage].phone}</h3>
+                <h3>{t("Contact.phone")}</h3>
                 <p>+47-46380551</p>
               </div>
             </div>
@@ -65,7 +40,7 @@ function Contact({ selectedLanguage }) {
                 <FaEnvelope />
               </div>
               <div className="info">
-                <h3>{text[selectedLanguage].email}</h3>
+                <h3>{t("Contact.email")}</h3>
                 <a href="mailto:alim.basok.erk@gmail.com">
                   alim.basok.erk@gmail.com
                 </a>
@@ -78,50 +53,42 @@ function Contact({ selectedLanguage }) {
             method="POST"
           >
             <div className="forum">
-              <label htmlFor="from_name">
-                {text[selectedLanguage].fullname}
-              </label>
+              <label htmlFor="from_name">{t("Contact.fullname")}</label>
               <input
                 type="text"
                 name="from_name"
                 id="from_name"
-                placeholder={text[selectedLanguage].name}
+                placeholder={t("Contact.name")}
                 required
               />
             </div>
             <div className="forum">
-              <label htmlFor="message">{text[selectedLanguage].Message}</label>
+              <label htmlFor="message">{t("Contact.Message")}</label>
               <input
                 type="text"
                 name="message"
                 id="message"
-                placeholder={text[selectedLanguage].yourMessage}
+                placeholder={t("Contact.yourMessage")}
                 required
               />
             </div>
             <div className="forum">
-              <label htmlFor="reply_to">{text[selectedLanguage].Email}</label>
+              <label htmlFor="reply_to">{t("Contact.Email")}</label>
               <input
                 type="text"
                 name="reply_to"
                 id="reply_to"
-                placeholder={text[selectedLanguage].email}
+                placeholder={t("Contact.email")}
                 required
               />
             </div>
-            <input
-              type="submit"
-              id="button"
-              value={text[selectedLanguage].buttonText}
-            />
+            <input type="submit" id="button" value={t("Contact.buttonText")} />
           </form>
           <img className="contactGift" src={contactImg} alt="contact" />
         </div>
       </div>
-    </main>
+    </header>
   );
 }
-Contact.propTypes = {
-  selectedLanguage: PropTypes.string.isRequired,
-};
+
 export default Contact;
