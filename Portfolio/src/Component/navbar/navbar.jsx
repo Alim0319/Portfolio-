@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import resume from "../images/CV_Alim .pdf";
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
-
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import "../styles/main.css";
@@ -11,9 +11,12 @@ import "../styles/main.css";
 function Navbar() {
   const navRef = useRef();
   const { t } = useTranslation();
-
-  const showNavbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  /*const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
+  };*/
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen); // Rename setIsNavbarOpen to setIsOpen
   };
   return (
     <header>
@@ -22,7 +25,7 @@ function Navbar() {
           <img src="logo-color.png" alt="Logo" />
         </Link>
       </div>
-      <nav ref={navRef}>
+      <nav ref={navRef} className={isOpen ? "responsive_nav" : ""}>
         <ul className="nav-list">
           <li>
             <Link to="/Home">
@@ -52,12 +55,12 @@ function Navbar() {
           </li>
         </ul>
 
-        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+        <button className="nav-btn nav-close-btn" onClick={toggleNavbar}>
           <FaTimes />
         </button>
       </nav>
 
-      <button className="nav-btn" onClick={showNavbar}>
+      <button className="nav-btn" onClick={toggleNavbar}>
         <FaBars />
       </button>
     </header>

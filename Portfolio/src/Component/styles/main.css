@@ -76,7 +76,7 @@ header {
   color: var(--textColor);
 }
 
-header .nav-btn {
+/*header .nav-btn {
   position: relative;
   padding: 5px;
   cursor: pointer;
@@ -95,7 +95,45 @@ nav .nav-close-btn {
   opacity: 0;
   top: 1rem;
   right: 3rem;
-  z-index: 999;
+  z-index: 99;
+}*/
+.nav-btn {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  background: none;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  opacity: 0;
+  outline: none;
+  color: var(--textColor); /* Change to your desired color */
+  font-size: 1.8rem;
+  transition: opacity 0.3s ease; /* Smooth opacity transition on hover */
+}
+
+.nav-btn:hover {
+  opacity: 0.7; /* Reduce opacity on hover (adjust as needed) */
+}
+
+/* Style for the close button */
+.nav-close-btn {
+  position: absolute;
+  cursor: pointer;
+  top: 1rem;
+  right: 3rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColor); /* Change this to your desired text color */
+  font-size: 1.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Style for the close button when it's visible */
+.nav-close-btn.active {
+  opacity: 1;
 }
 
 .nav-list {
@@ -154,19 +192,20 @@ nav .nav-close-btn {
 
   header nav {
     display: flex;
+    flex-wrap: row;
     position: absolute;
-    top: 65px;
+    top: 80px;
     left: auto;
-    height: 300px;
+    height: auto;
     width: 100%;
 
+    gap: 1.5rem;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
-
+    cursor: pointer;
     transition: 1s;
-    transform: translateY(-120%);
-    background: transparent;
+    transform: translateY(-250%);
+    background: var(--mainColorLight);
   }
   header .responsive_nav {
     transform: none;
@@ -181,6 +220,6 @@ nav .nav-close-btn {
   }
   .nav-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 }

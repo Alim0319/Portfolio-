@@ -2,11 +2,12 @@ import "../About/About.css";
 import codeImg from "../images/skilles.png";
 import { useTranslation } from "react-i18next";
 import PropTypes from "prop-types";
-<AboutPage selectedLanguage="no" />;
 
 function AboutPage({ selectedLanguage }) {
   const { t } = useTranslation();
+  <AboutPage selectedLanguage="no" />;
   const isNorwegian = selectedLanguage === "no";
+
   return (
     <header className="about">
       <div className="about-content">
