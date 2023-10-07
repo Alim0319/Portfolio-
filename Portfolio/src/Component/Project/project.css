@@ -19,18 +19,17 @@ h2 {
 .project1 {
   background-color: var(--textColor);
   min-height: 82vh;
-  width: 100%;
+
   align-items: center;
 }
 .project-container {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   display: grid;
   gap: 30px;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
-
+  margin-left: 80px;
   border-radius: 5px;
 }
 
@@ -111,25 +110,38 @@ h2 {
 
 @media screen and (max-width: 1024px) {
   .project-container {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    padding: 20px;
+    grid-template-rows: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* Bytt til grid-template-rows */
+    /* Behold denne */
+    margin-left: 10px;
+
+    gap: 30px; /* Behold denne */
+    justify-content: center; /* Behold denne hvis nødvendig */
+    align-items: center; /* Behold denne hvis nødvendig */
+    padding: 10px; /* Behold denne */
+
+    border-radius: 5px;
   }
   .project1 {
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
+    margin-top: 50px;
   }
   .project-item {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+  }
+  .project {
+    width: 90%;
   }
 
   .project-icons {
     height: 25px;
+    opacity: 0;
+  }
+  .project-icons:hover {
+    height: 25px;
     opacity: 1;
   }
-
   .project-icons .icon {
     width: 25px;
     height: 25px;
@@ -147,7 +159,8 @@ h2 {
     transform: scale(1);
   }
   .project1 h1 {
-    font-size: 28px;
+    font-size: 32px;
+    margin-bottom: 50px;
   }
   .project1 h2 {
     font-size: 1rem;

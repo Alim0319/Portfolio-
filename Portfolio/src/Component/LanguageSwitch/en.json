@@ -11,17 +11,16 @@
   "aboutPage": {
     "title": "About me",
     "paragraph1": "My full-stack web development journey began in early 2023 when I joined Kodehode, a comprehensive full-stack course.",
-    "paragraph2": "I’m well-versed in React, Node, and Express, which I use to create cool and interactive web apps. Additionally, I’ve explored Python basics on my own, broadening my horizons beyond front-end technologies. Before delving into web development, I gained valuable experience as a QA tester at United Coder LLC from 2020 to 2022.",
+    "paragraph2": "I’m well-versed in React, Node, and Express, which I use to create cool and interactive web apps. Additionally,  I've also independently explored the basics of Cypress, broadening my skills beyond front-end technologies. Before diving into web development, I gained valuable experience as a QA tester at United Coder LLC from 2020 to 2022.",
     "paragraph3": "Even as a junior developer, I believe that the little things matter in web development. I’m dedicated to creating user-friendly interfaces and optimizing the overall user experience. Seeing people enjoy and benefit from the apps I build motivates me to keep pushing the boundaries of design and functionality.",
     "Skills": "Skills",
     "paragraph4": " "
   },
   "HomePage": {
     "hompageTitel": "Hi there, I'm Alim ",
-    "profession2": "Full Stack Web Developer & QA ",
     "profession1": "Welcome to my portfolio! I work in full stack web",
-    "profession3": "development and  QA and test automation.Explore my",
-    "profession4": "my work and let's connect to bring your web projects to life.."
+    "profession3": "development, QA and test automation.Explore my",
+    "profession4": "work and let's connect to bring your web projects to life."
   },
   "Projectes": {
     "title": "My Projects",
