@@ -101,14 +101,14 @@ function Projects() {
             <FaCss3 className="icon" />
             <FaJs className="icon" />
             <a
-              href="https://alim0319.github.io/Code/"
+              href="https://github.com/Alim0319/Code"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub className="icon" />
             </a>
             <a
-              href="https://comforting-florentine-4deae8.netlify.app/"
+              href="https://alim0319.github.io/Code/"
               target="_blank"
               rel="noopener noreferrer"
             >
