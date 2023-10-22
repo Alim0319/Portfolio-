@@ -1,19 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&family=Delicious+Handrawn&family=Spectral:ital,wght@0,200;0,300;0,400;1,200;1,400&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /*font-family: "Cardo", serif;
-  font-family: "Delicious Handrawn", cursive;*/
   font-family: "Spectral", serif;
 }
+
 :root {
   --mainColor: #29335c;
   --mainColorLight: #5767aa;
   --secondaryColor: orange;
   --textColor: #ffff;
-  min-height: 100vh;
+  height: 100vh;
   align-items: center;
 }
 
@@ -21,12 +18,13 @@
   height: auto;
   width: 80px;
   padding: 5px;
-
   transition: filter 300ms;
 }
+
 .logo img:hover {
-  filter: drop-shadow(0 0 2 px #646cffaa);
+  filter: drop-shadow(0 0 2px #646cffaa);
 }
+
 .logo img.react:hover {
   filter: drop-shadow(0 0 2px #61dafbaa);
 }
@@ -48,8 +46,8 @@
 
 li {
   margin-right: 30px;
+  margin-left: 30px;
   list-style: none;
-
   position: relative;
   cursor: pointer;
   align-items: center;
@@ -60,45 +58,25 @@ nav a {
   color: var(--textColor);
   font-size: 1.5rem;
 }
+
 a:hover {
   color: var(--secondaryColor);
 }
+
 header {
   height: 80px;
-  /*position: relative;*/
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
+  align-items: center;
   justify-content: space-between;
   background-color: var(--mainColor);
   color: var(--textColor);
 }
 
-/*header .nav-btn {
-  position: relative;
-  padding: 5px;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: var(--textColor);
-  visibility: visible;
-  opacity: 0;
-  font-size: 1.8rem;
-  z-index: 10;
-}
-nav .nav-close-btn {
-  position: absolute;
-  cursor: pointer;
-  opacity: 0;
-  top: 1rem;
-  right: 3rem;
-  z-index: 99;
-}*/
 .nav-btn {
   display: flex;
-  padding: 10px;
   cursor: pointer;
   background: none;
   align-items: center;
@@ -106,16 +84,15 @@ nav .nav-close-btn {
   border: none;
   opacity: 0;
   outline: none;
-  color: var(--textColor); /* Change to your desired color */
-  font-size: 1.8rem;
-  transition: opacity 0.3s ease; /* Smooth opacity transition on hover */
+  color: var(--textColor);
+  font-size: 1.5rem;
+  transition: opacity 0.3s ease;
 }
 
 .nav-btn:hover {
-  opacity: 0.7; /* Reduce opacity on hover (adjust as needed) */
+  opacity: 0.7;
 }
 
-/* Style for the close button */
 .nav-close-btn {
   position: absolute;
   cursor: pointer;
@@ -124,13 +101,12 @@ nav .nav-close-btn {
   background: transparent;
   border: none;
   outline: none;
-  color: var(--textColor); /* Change this to your desired text color */
+  color: var(--textColor);
   font-size: 1.8rem;
   opacity: 0;
-  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+  transition: opacity 0.3s ease;
 }
 
-/* Style for the close button when it's visible */
 .nav-close-btn.active {
   opacity: 1;
 }
@@ -143,42 +119,15 @@ nav .nav-close-btn {
   text-align: center;
 }
 
-/*.dropdown a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}*/
-
-/*.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: calc(20px + 10px);
-  left: 0;
-  background: transparent;
-  border-radius: 4px;
-  padding: 0.5rem 0;
-  box-shadow: 0px 4px 6px var(--mainColor);
-  z-index: 2;
-
-  width: 200px;
-}
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-.dropdown-menu li {
-  /*padding: 0.5rem 1rem;
-
-  left: 10px;
-}
-*/
 .nav-list .icon {
   font-size: 2rem;
   color: var(--textColor);
   cursor: pointer;
   align-items: center;
-  bottom: 10px;
+  justify-content: center;
 }
-.nav-list .icon :hover {
+
+.nav-list .icon:hover {
   color: var(--secondaryColor);
 }
 
@@ -191,21 +140,20 @@ nav .nav-close-btn {
   header nav {
     display: flex;
     flex-wrap: row;
-    position: absolute;
+    position: fixed;
     top: 80px;
-    left: 0;
-    height: auto;
-    width: 100%;
-    gap: 1.5rem;
-
+    gap: 1rem;
     cursor: pointer;
     transition: 1s;
     transform: translateY(-250%);
     background: var(--mainColorLight);
+    font-size: 1rem;
   }
+
   header .responsive_nav {
     transform: none;
   }
+
   nav .nav-close-btn {
     width: 100%;
     height: 30px;
@@ -213,13 +161,13 @@ nav .nav-close-btn {
     justify-content: end;
     align-items: center;
   }
+
   nav a {
-    font-size: 1.5 rem;
+    font-size: 1.5rem;
     align-items: center;
   }
+
   .nav-list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    font-size: 1rem;
   }
 }

@@ -1,6 +1,6 @@
 .home {
   align-items: center;
-  min-height: 83vh;
+  min-height: 80.5vh;
   justify-content: space-between;
   background-color: var(--mainColorLight);
   object-fit: cover;
@@ -40,14 +40,23 @@
     border-radius: 50%;
     padding-bottom: 0;
   }
+
   .coding {
     width: 300px;
     height: auto;
   }
+
   .home h1 {
     font-size: 24px;
   }
+
   .home h4 {
     font-size: 12px;
+  }
+
+  /* Mediestiler for bilder */
+  .me,
+  .coding {
+    max-width: 100%; /* Begrenser bildebredden til forelderens bredde */
   }
 }

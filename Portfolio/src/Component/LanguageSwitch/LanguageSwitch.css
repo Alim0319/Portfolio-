@@ -1,7 +1,7 @@
 .language-switch-container {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 /* Style the select element */
