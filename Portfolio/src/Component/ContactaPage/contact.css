@@ -1,5 +1,4 @@
 .contact {
-  position: relative;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -13,7 +12,7 @@
   font-size: 38px;
   color: var(--secondaryColor);
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .icon {
@@ -26,6 +25,7 @@
 }
 
 .container {
+  margin-right: 20px;
   align-items: start;
   justify-content: baseline;
 }
@@ -43,12 +43,14 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-bottom: 0px;
 }
+
 .forum {
   width: 300px;
   color: #000;
+  margin-bottom: 10px;
 }
+
 .field {
   margin-bottom: 15px;
 }
@@ -68,7 +70,6 @@ input[type="text"] {
 
 #button {
   display: block;
-  width: 100%;
   padding: 10px;
   background-color: var(--mainColorLight);
   color: white;
@@ -82,6 +83,7 @@ input[type="text"] {
   max-width: 400px;
   align-items: center;
   justify-content: center;
+  margin-left: 100px;
 }
 
 #message {
@@ -93,77 +95,54 @@ input[type="text"] {
 @media only screen and (max-width: 1024px) {
   /* Juster stiler for mindre skjermer her */
   .contact {
-    height: auto;
-    width: 100%; /* Endre høyde til automatisk tilpassning */
-    /* Reduser padding for mindre skjermer */
+    align-items: center;
+    height: 90vh;
   }
   .contact h1 {
-    font-size: 24px; /* Endre fontstørrelse for h1-elementet */
-    /* Juster toppmargin for h1-elementet */
+    font-size: 24px;
+    margin-top: 100px;
+    margin-bottom: 25px;
   }
   .icon {
-    font-size: 16px; /* Endre ikonstørrelse */
+    font-size: 16px;
+    margin-right: 0; /* Fjern høyre marg for ikoner */
   }
   .container .box {
-    width: auto; /* Gjør boksene full bredde */
+    width: auto;
   }
   .contactForum {
-    margin-bottom: 0px; /* Reduser bunnplassering for forumet */
+    margin-bottom: 0px;
   }
   .forum {
-    width: auto; /* Gjør forumet full bredde */
-    margin-left: 20px;
+    width: auto;
+    margin-left: 0; /* Fjern venstre marg for forum */
   }
   .field {
-    margin-bottom: 10px; /* Reduser mellomrom mellom feltene */
+    margin-bottom: 10px;
   }
   input[type="text"] {
-    padding: 2px; /* Reduser tekstinntakets padding */
+    padding: 2px;
   }
   #button {
-    font-size: 16px; /* Endre knappens fontstørrelse */
-  }
-  .contactGift {
-    max-width: 300px; /* Reduser maksimal bredde for gaven */
-  }
-  #message {
-    height: 150px; /* Juster høyden på meldingsboksen */
-  }
-}
-@media screen and (max-width: 450px) {
-  .contact {
-    height: auto;
-  }
-  .contact h1 {
-    font-size: 1rem;
-  }
-
-  .forum {
-    bottom: 0;
-  }
-
-  .contactGift {
     display: block;
-
-    width: auto;
-    border-radius: 50%;
-    height: auto;
-    overflow: hidden;
+    width: 90%;
+    padding: 0px;
+    background-color: var(--mainColorLight);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
   }
-
+  .contactGift {
+    height: 300px;
+    width: auto;
+    margin-left: 0;
+  }
   #message {
-    height: 100px;
+    height: 120px;
   }
-
-  .contactForum {
-    height: auto;
-    width: auto;
-  }
-
-  .container .box {
-    width: auto;
-  }
-  p {
-    font-size: 0.8rem;
+  .container {
+    margin-right: 0;
   }
 }

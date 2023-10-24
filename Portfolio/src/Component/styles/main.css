@@ -10,164 +10,137 @@
   --mainColorLight: #5767aa;
   --secondaryColor: orange;
   --textColor: #ffff;
+
   height: 100vh;
-  align-items: center;
 }
 
-.logo img {
-  height: auto;
-  width: 80px;
-  padding: 5px;
-  transition: filter 300ms;
-}
+/* Felles stiler for både mobil og desktop */
 
-.logo img:hover {
-  filter: drop-shadow(0 0 2px #646cffaa);
-}
-
-.logo img.react:hover {
-  filter: drop-shadow(0 0 2px #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-li {
-  margin-right: 30px;
-  margin-left: 30px;
-  list-style: none;
-  position: relative;
-  cursor: pointer;
-  align-items: center;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--textColor);
-  font-size: 1.5rem;
-}
-
-a:hover {
-  color: var(--secondaryColor);
-}
-
-header {
-  height: 80px;
-  width: 100%;
+.navbar {
   display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
   background-color: var(--mainColor);
   color: var(--textColor);
 }
 
-.nav-btn {
-  display: flex;
-  cursor: pointer;
-  background: none;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  opacity: 0;
-  outline: none;
-  color: var(--textColor);
-  font-size: 1.5rem;
-  transition: opacity 0.3s ease;
+.navbar .logo img {
+  height: auto;
+  width: 80px;
+  transition: filter 300ms;
 }
 
-.nav-btn:hover {
-  opacity: 0.7;
-}
-
-.nav-close-btn {
-  position: absolute;
-  cursor: pointer;
-  top: 1rem;
-  right: 3rem;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: var(--textColor);
-  font-size: 1.8rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.nav-close-btn.active {
-  opacity: 1;
-}
-
-.nav-list {
+.navbar .nav-list {
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  text-align: center;
 }
 
-.nav-list .icon {
-  font-size: 2rem;
+.navbar .nav-list li {
+  margin-right: 30px;
+}
+
+.navbar .nav-list a {
+  text-decoration: none;
   color: var(--textColor);
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.2rem;
 }
 
-.nav-list .icon:hover {
+.navbar .nav-list a:hover {
   color: var(--secondaryColor);
 }
 
+.nav-list .icon {
+  color: var(--textColor);
+  font-size: 1.8rem;
+  margin-bottom: 13px;
+}
+.nav-list .icon :hover {
+  color: var(--secondaryColor);
+}
+.navbar .toggleButton button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  font-size: 1.5rem;
+  color: var(--textColor);
+}
+
+/* Endre fargen til toggle-knappen når den er aktivert (ekspandert) */
+.navbar #open .toggleButton button {
+  color: transparent;
+  max-height: 100px;
+  display: flex;
+  visibility: hidden;
+
+  transition: max-height 0.3s;
+}
+
+#open .links {
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 5%;
+}
+
+#open a {
+  width: 100%;
+  text-align: center;
+  animation: appear 0.3s both;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Media Query for mobilvisning */
+
 @media only screen and (max-width: 1024px) {
-  header .nav-btn {
-    visibility: visible;
-    opacity: inherit;
-  }
-
-  header nav {
+  .toggleButton {
     display: flex;
-    flex-wrap: row;
-    position: fixed;
-    top: 80px;
-    gap: 1rem;
-    cursor: pointer;
-    transition: 1s;
-    transform: translateY(-250%);
-    background: var(--mainColorLight);
+  }
+
+  #close a {
+    display: none;
+  }
+
+  #open {
+    height: 100px;
+  }
+
+  #open .links {
+    flex-direction: row;
+    margin-top: 5px;
+  }
+
+  .navbar #open .nav-list {
+    max-height: 10vh;
+  }
+  .navbar #open .toggleButton button {
+    color: transparent;
+    max-height: 100vh;
+    display: flex;
+    transition: max-height 0.3s;
+  }
+  .navbar .toggleButton button {
+    font-size: 1.8rem;
+    opacity: 1;
+    display: flex;
+  }
+
+  .nav-list .icon {
+    font-size: 1.3rem;
+  }
+
+  .navbar .nav-list a {
     font-size: 1rem;
   }
-
-  header .responsive_nav {
-    transform: none;
-  }
-
-  nav .nav-close-btn {
-    width: 100%;
-    height: 30px;
-    overflow: hidden;
-    justify-content: end;
-    align-items: center;
-  }
-
-  nav a {
-    font-size: 1.5rem;
-    align-items: center;
-  }
-
-  .nav-list {
-    font-size: 1rem;
+  .navbar .nav-list li {
+    margin-right: 10px;
   }
 }

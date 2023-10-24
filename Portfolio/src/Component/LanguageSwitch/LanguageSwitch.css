@@ -19,3 +19,16 @@
   color: white;
   cursor: pointer;
 }
+@media only screen and (max-width: 1024px) {
+  .globe-icon {
+    font-size: 15px;
+
+    cursor: pointer;
+  }
+  #languageSwitch {
+    padding: 2.5px;
+    border: 0.5px solid black;
+    border-radius: 4px;
+    background-color: transparent;
+  }
+}
