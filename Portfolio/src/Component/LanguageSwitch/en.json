@@ -18,9 +18,9 @@
   },
   "HomePage": {
     "hompageTitel": "Hi there, I'm Alim ",
-    "profession1": "Welcome to my portfolio! I work in full stack web",
-    "profession3": "development, QA and test automation.Explore my",
-    "profession4": "work and let's connect to bring your web projects to life."
+    "profession1": "Welcome to my portfolio! I work in full stack web development, QA and test automation.",
+    "profession3": "Explore my work and let's connect to bring your web projects to life.",
+    "profession4": "Hi there, I'm Alim"
   },
   "Projectes": {
     "title": "My Projects",

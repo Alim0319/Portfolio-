@@ -19,9 +19,9 @@
   "HomePage": {
     "hompageTitel": "Hei der, Jeg er Alim",
 
-    "profession1": "Velkommen til min portefølje! Jeg jobber med full",
-    "profession3": "stack webutvikling og QA / testautomatisering. Utforsk",
-    "profession4": "mitt arbeid, og la oss samarbeide for å realisere dine webprosjekter."
+    "profession1": "Velkommen til min portefølje! Jeg jobber med full stack webutvikling og QA / testautomatisering.",
+    "profession3": " Utforsk mitt arbeid, og la oss samarbeide for å realisere dine webprosjekter.",
+    "profession4": "Hei der, Jeg er Alim"
   },
   "Projectes": {
     "title": "Mine Prosjekter",
