@@ -1,4 +1,4 @@
-* {
+/* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,7 +16,7 @@
 
 /* Felles stiler for både mobil og desktop */
 
-.navbar {
+/*.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,7 +69,7 @@
 }
 
 /* Endre fargen til toggle-knappen når den er aktivert (ekspandert) */
-.navbar #open .toggleButton button {
+/*.navbar #open .toggleButton button {
   color: transparent;
   max-height: 100px;
   display: flex;
@@ -100,7 +100,7 @@
 }
 /* Media Query for mobilvisning */
 
-@media only screen and (max-width: 1024px) {
+/*@media only screen and (max-width: 1024px) {
   .toggleButton {
     display: flex;
   }
@@ -140,6 +140,131 @@
   .navbar .nav-list a {
     font-size: 1rem;
   }
+  .navbar .nav-list li {
+    margin-right: 10px;
+  }
+}
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spectral", serif;
+}
+
+:root {
+  --mainColor: #29335c;
+  --mainColorLight: #5767aa;
+  --secondaryColor: orange;
+  --textColor: #ffff;
+
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--mainColor);
+  color: var(--textColor);
+}
+
+.navbar .logo img {
+  height: auto;
+  width: 80px;
+  transition: filter 300ms;
+}
+
+.navbar .nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-list li {
+  margin-right: 30px;
+}
+
+.navbar .nav-list a {
+  text-decoration: none;
+  color: var(--textColor);
+  font-size: 1.2rem;
+}
+
+.navbar .nav-list a:hover {
+  color: var(--secondaryColor);
+}
+
+.nav-list .icon {
+  color: var(--textColor);
+  font-size: 1.8rem;
+  margin-bottom: 13px;
+}
+
+.navbar .toggleButton button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  font-size: 1.5rem;
+  color: var(--textColor);
+}
+
+/* Change color of the toggle button when expanded */
+.navbar.open .toggleButton button {
+  color: transparent;
+  max-height: 100px;
+  display: flex;
+  visibility: hidden;
+  transition: max-height 0.3s;
+}
+
+/* Mobile View Styles */
+@media only screen and (max-width: 1024px) {
+  .toggleButton {
+    display: flex;
+  }
+
+  .navbar.close a {
+    display: none;
+  }
+
+  .navbar.open {
+    height: 100px;
+  }
+
+  .navbar.open .links {
+    flex-direction: row;
+    margin-top: 5px;
+  }
+
+  .navbar.open .nav-list {
+    max-height: 10vh;
+  }
+
+  .navbar.open .toggleButton button {
+    color: transparent;
+    max-height: 100vh;
+    display: flex;
+    transition: max-height 0.3s;
+  }
+
+  .navbar .toggleButton button {
+    font-size: 1.8rem;
+    opacity: 1;
+    display: flex;
+  }
+
+  .nav-list .icon {
+    font-size: 1.3rem;
+  }
+
+  .navbar .nav-list a {
+    font-size: 1rem;
+  }
+
   .navbar .nav-list li {
     margin-right: 10px;
   }

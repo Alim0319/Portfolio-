@@ -19,7 +19,7 @@ h2 {
 .project1 {
   background-color: var(--textColor);
   min-height: 82vh;
-
+  max-width: inherit;
   align-items: center;
 }
 .project-container {

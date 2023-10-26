@@ -92,3 +92,111 @@ function Contact() {
 }
 
 export default Contact;
+/*import "../ContactaPage/contact.css";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
+import contactImg from "../images/contact.gif";
+import { useTranslation } from "react-i18next";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+function Contact() {
+  const { t } = useTranslation();
+
+  return (
+    <header className="container contact  max-width-1284">
+      <h1 className="text-center custom-heading">{t("Contact.title")}</h1>
+      <div className="row">
+        <div className="col-md-6 custom-col">
+          <div className="box">
+            <div className="icon">
+              <FaMapMarkerAlt />
+            </div>
+            <div className="info">
+              <h3>{t("Contact.address")}</h3>
+              <p>
+                Båtstadstein 8B, 4056
+                <br />
+                Tananger
+              </p>
+            </div>
+          </div>
+          <div className="box">
+            <div className="icon">
+              <FaPhone />
+            </div>
+            <div className="info">
+              <h3>{t("Contact.phone")}</h3>
+              <p>+47-46380551</p>
+            </div>
+          </div>
+          <div className="box">
+            <div className="icon">
+              <FaEnvelope />
+            </div>
+            <div className="info">
+              <h3>{t("Contact.email")}</h3>
+              <a href="mailto:alim.basok.erk@gmail.com">
+                alim.basok.erk@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6 custom-col">
+          <form
+            target="_blank"
+            action="https://formsubmit.co/alim.basok.erk@gmail.com"
+            method="POST"
+          >
+            <div className="form-group">
+              <label htmlFor="from_name">
+                <h3>{t("Contact.fullname")}</h3>
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                name="from_name"
+                id="from_name"
+                placeholder={t("Contact.name")}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">
+                <h3>{t("Contact.Message")}</h3>
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                name="message"
+                id="message"
+                placeholder={t("Contact.yourMessage")}
+                maxLength="1000"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="reply_to">
+                <h3>{t("Contact.Email")}</h3>
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                name="reply_to"
+                id="reply_to"
+                placeholder={t("Contact.email")}
+                required
+              />
+            </div>
+            <button type="submit" className="btn btn-primary">
+              {t("Contact.buttonText")}
+            </button>
+          </form>
+        </div>
+        <div className="col-md-6 custom-col">
+          <img className="contactGift" src={contactImg} alt="contact" />
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export default Contact;*/

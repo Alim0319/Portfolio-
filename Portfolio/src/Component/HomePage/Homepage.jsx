@@ -16,13 +16,13 @@ function HomePage() {
             onInit={(typewriter) => {
               typewriter
                 .typeString(t("HomePage.hompageTitel"))
-                .pauseFor(1000)
+                .pauseFor(100)
                 .deleteAll()
                 .typeString(t("HomePage.profession1"))
-                .pauseFor(1000)
+                .pauseFor(100)
                 .deleteAll()
                 .typeString(t("HomePage.profession3"))
-                .pauseFor(1000)
+                .pauseFor(100)
                 .deleteAll()
                 .typeString(t("HomePage.profession4"))
                 .start();

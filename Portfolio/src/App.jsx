@@ -5,7 +5,7 @@ import Projects from "./Component/Project/Project";
 //import MySkills1 from "./Component/MySkills/MySkills";
 import Contact from "./Component/ContactaPage/ContactaPage";
 import Footer from "./Component/footer/footer";
-
+import Education from "./EdicationAndWork/Edu";
 import { I18nextProvider } from "react-i18next";
 
 import i18n from "./Component/LanguageSwitch/i18n";
@@ -28,10 +28,8 @@ function App() {
             <Route path="/logo" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/about" element={<About />} />
-            {/*<Route
-            path="/Skills"
-            element={<MySkills1 selectedLanguage={selectedLanguage} />}
-  />*/}
+            <Route path="/Education" element={<Education />} />
+
             <Route path="/Project" element={<Projects />} />
             <Route path="/Contact" element={<Contact />} />
           </Routes>
