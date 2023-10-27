@@ -276,7 +276,7 @@
 
   .nav-list .icon {
     font-size: 1.1rem;
-    margin-bottom: 13px;
+    margin-bottom: 1px;
   }
 
   .navbar .nav-list a {
@@ -312,7 +312,7 @@
     }
     .nav-list .icon {
       font-size: 0.8rem;
-      margin-bottom: 15px;
+      margin-bottom: 3px;
     }
 
     .navbar .nav-list a {

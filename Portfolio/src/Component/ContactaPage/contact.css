@@ -1,4 +1,4 @@
-.contact {
+/*.contact {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -106,7 +106,7 @@ input[type="text"] {
   .icon {
     font-size: 16px;
     margin-right: 0; /* Fjern høyre marg for ikoner*/
-  }
+/*}
   .container .box {
     width: auto;
   }
@@ -116,7 +116,7 @@ input[type="text"] {
   .forum {
     width: auto;
     margin-left: 0; /* Fjern venstre marg for forum */
-  }
+/*}
   .field {
     margin-bottom: 10px;
   }
@@ -146,15 +146,15 @@ input[type="text"] {
   .container {
     margin-right: 0;
   }
-}
+}*/
 
-/*.container.contact {
+.container.contact {
   background-color: white;
   height: 82vh;
   justify-content: space-between;
   overflow: hidden;
   padding: 30px; /* Add some padding for spacing */
-/*align-items: center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -165,15 +165,27 @@ input[type="text"] {
   text-align: center;
   margin-bottom: 50px;
 }
-
+.vertical-timeline--two-columns .vertical-timeline-element-content {
+  margin-left: 0;
+  padding: 5px;
+  width: auto;
+}
+.custom-timeline-element .vertical-timeline-element {
+  margin: 5px;
+}
+.vertical-timeline-element-icon .bounce-in {
+  left: -6px;
+}
+.vertical-timeline-element-content .bounce-in {
+  float: 0;
+}
 /* Style for the icons */
-/*.box .icon {
+.box .icon {
   color: var(--secondaryColor);
   font-size: 24px; /* Adjust the icon size as needed */
-/*}
-
+}
 /* Style for the address, phone, and email information */
-/*.box .info {
+.box .info {
   color: black;
   font-size: 1rem;
   margin-top: 10px;
@@ -184,13 +196,14 @@ input[type="text"] {
 }
 
 /* Style for the contact form and submit button */
-/*.form-group {
+.form-group {
   /* Add more spacing between form elements */
-/*align-items: center;
+  align-items: center;
   width: 300px;
+  margin: 25px 0px 25px 0px;
 }
 .custom-col {
-  width: 428px !important;
+  width: 33% !important;
 }
 .col-md-6 {
   display: flex;
@@ -198,7 +211,7 @@ input[type="text"] {
 }
 
 .col-md-6 form {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .contactGift {
@@ -215,7 +228,6 @@ input[type="text"] {
 
 .form-control {
   border-radius: 5px;
-  height: 50px;
 }
 
 .btn-primary {
@@ -227,26 +239,32 @@ input[type="text"] {
   font-size: 18px;
   margin-top: 5px;
   width: 300px; /* Adjust the font size of the button text */
-/* Make the button width 100% within its container */
-/*}
+  /* Make the button width 100% within its container */
+}
 
 /* Responsive adjustments */
-/*@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .container.contact {
     height: 100%;
   }
+  .form-group {
+    /* Add more spacing between form elements */
+    align-items: center;
+    width: 200px;
+    margin: 10px 0px 10px 0px;
+  }
 
   .custom-heading {
-    font-size: 24px;
+    font-size: 38px;
     margin-top: 100px;
     margin-bottom: 25px;
   }
   .custom-col {
-    width: auto !important;
+    width: 50% !important;
   }
 
   .box .icon {
-    font-size: 20px;
+    font-size: 18px;
     margin-right: 0;
   }
 
@@ -254,33 +272,18 @@ input[type="text"] {
     padding: 10px;
   }
 
-  .col-md-6 form,
-  .col-md-6 .contactGift {
-    max-width: 100%; /* Adjust the maximum width for responsiveness */
-/*}
-
-  .form-group {
-    margin-bottom: 10px;
-    width: 200px;
-  }
-
   .btn-primary {
     font-size: 12px;
     width: 200px;
-    height: 25px;
+    height: 35px;
     bottom: 2px;
   }
 
-  .contactGift {
-    height: 350px;
-    width: auto;
+  .col-md-6 .contactGift {
+    height: 400px;
+    width: 100%;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
   }
-  @media (min-width: 768px) {
-    .custom-col {
-      width: auto !important;
-    }
-  }
-}*/
+}

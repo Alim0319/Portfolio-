@@ -1,4 +1,4 @@
-import "../ContactaPage/contact.css";
+/*import "../ContactaPage/contact.css";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import contactImg from "../images/contact.gif";
 import { useTranslation } from "react-i18next";
@@ -91,12 +91,16 @@ function Contact() {
   );
 }
 
-export default Contact;
-/*import "../ContactaPage/contact.css";
+export default Contact;*/
+import "../ContactaPage/contact.css";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import contactImg from "../images/contact.gif";
 import { useTranslation } from "react-i18next";
 import "bootstrap/dist/css/bootstrap.min.css";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 
 function Contact() {
   const { t } = useTranslation();
@@ -106,39 +110,40 @@ function Contact() {
       <h1 className="text-center custom-heading">{t("Contact.title")}</h1>
       <div className="row">
         <div className="col-md-6 custom-col">
-          <div className="box">
-            <div className="icon">
-              <FaMapMarkerAlt />
-            </div>
-            <div className="info">
-              <h3>{t("Contact.address")}</h3>
-              <p>
+          <VerticalTimeline>
+            <VerticalTimelineElement
+              className="custom-timeline-element"
+              icon={<FaMapMarkerAlt />}
+            >
+              <h3 className="custom-timeline-title">{t("Contact.address")}</h3>
+              <p className="custom-timeline-text">
                 Båtstadstein 8B, 4056
                 <br />
                 Tananger
               </p>
-            </div>
-          </div>
-          <div className="box">
-            <div className="icon">
-              <FaPhone />
-            </div>
-            <div className="info">
-              <h3>{t("Contact.phone")}</h3>
-              <p>+47-46380551</p>
-            </div>
-          </div>
-          <div className="box">
-            <div className="icon">
-              <FaEnvelope />
-            </div>
-            <div className="info">
-              <h3>{t("Contact.email")}</h3>
-              <a href="mailto:alim.basok.erk@gmail.com">
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="custom-timeline-element"
+              icon={<FaPhone />}
+            >
+              <h3 className="custom-timeline-title">{t("Contact.phone")}</h3>
+              <p className="custom-timeline-text">+47-46380551</p>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="custom-timeline-element"
+              icon={<FaEnvelope />}
+            >
+              <h3 className="custom-timeline-title">{t("Contact.email")}</h3>
+              <a
+                className="custom-timeline-link"
+                href="mailto:alim.basok.erk@gmail.com"
+              >
                 alim.basok.erk@gmail.com
               </a>
-            </div>
-          </div>
+            </VerticalTimelineElement>
+          </VerticalTimeline>
         </div>
         <div className="col-md-6 custom-col">
           <form
@@ -199,4 +204,4 @@ function Contact() {
   );
 }
 
-export default Contact;*/
+export default Contact;
