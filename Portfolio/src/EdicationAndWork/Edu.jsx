@@ -6,12 +6,16 @@ import "react-vertical-timeline-component/style.min.css";
 import Typewriter from "typewriter-effect";
 import { MdWork, MdOutlineCastForEducation } from "react-icons/md";
 import { FaGraduationCap } from "react-icons/fa";
-import { EduData } from "../data/EduData";
+import enData from "../Component/LanguageSwitch/en.json";
+import noData from "../Component/LanguageSwitch/no.json";
+//import { EduData } from "../data/EduData";
 import { useTranslation } from "react-i18next";
 
 // Hello
 function Education() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const EduData = i18n.language === "en" ? enData.EduData : noData.EduData;
+
   return (
     <div style={{ color: "#3c6e71" }}>
       <h1 style={{ color: "#3c6e71", textAlign: "center" }}>
@@ -29,29 +33,29 @@ function Education() {
         />
       </h1>
       <VerticalTimeline lineColor="#284B6366">
-        {EduData.map((Edu, index) => {
-          return (
-            <VerticalTimelineElement
-              key={index}
-              contentStyle={{ background: "#ffffff66", color: "#284B63" }}
-              contentArrowStyle={{ borderRight: "7px solid  #ffffff66" }}
-              iconStyle={{ background: "#284B63", color: "#F0DB4F48" }}
-              date={Edu.date}
-              icon={
-                Edu.icon === "W" ? (
-                  <MdWork />
-                ) : Edu.icon === "E" ? (
-                  <FaGraduationCap />
-                ) : (
-                  <MdOutlineCastForEducation />
-                )
-              }
-            >
-              <h3 className="vertical-timeline-element-title">{Edu.title}</h3>
-              <h4>{Edu.discrption}</h4>
-            </VerticalTimelineElement>
-          );
-        })}
+        {Array.isArray(EduData)
+          ? EduData.map((Edu, index) => (
+              <VerticalTimelineElement
+                key={index}
+                contentStyle={{ background: "#ffffff66", color: "#284B63" }}
+                contentArrowStyle={{ borderRight: "7px solid  #ffffff66" }}
+                iconStyle={{ background: "#284B63", color: "#F0DB4F48" }}
+                date={Edu.date}
+                icon={
+                  Edu.icon === "W" ? (
+                    <MdWork />
+                  ) : Edu.icon === "E" ? (
+                    <FaGraduationCap />
+                  ) : (
+                    <MdOutlineCastForEducation />
+                  )
+                }
+              >
+                <h3 className="vertical-timeline-element-title">{Edu.title}</h3>
+                <h4>{Edu.discrption}</h4>
+              </VerticalTimelineElement>
+            ))
+          : null}
       </VerticalTimeline>
       <a
         href=""
@@ -67,7 +71,7 @@ function Education() {
             onInit={(typewriter) => {
               typewriter
 
-                .typeString("Check my Linkedin for my CV")
+                .typeString(t("Education.Cv"))
 
                 .pauseFor(1000)
                 .deleteAll()

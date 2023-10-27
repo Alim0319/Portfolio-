@@ -2,7 +2,7 @@ export const EduData = [
   {
     date: "02/2023-Today",
     icon: "C",
-    title: "Full stac Devloper Course",
+    title: "Full Stack Devloper Course",
     place: "JobLoop- Stavanger",
     discrption:
       "KodeHode is a six-month bootcamp course with accompanying six-month internship at a company",

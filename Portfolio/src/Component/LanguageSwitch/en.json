@@ -3,6 +3,7 @@
   "translation": {
     "home": "Home",
     "about": "About",
+    "Work/Education": "Work/Education",
     "Skills": "Skills",
     "Projects": "Projects",
     "Download Resume": "Download Resume",
@@ -44,13 +45,14 @@
   },
   "Education": {
     "title": "Facts About My Edicatin and Work",
-    "title1": "Welcome 🙂"
+    "title1": "Welcome 🙂",
+    "Cv": "Check my Linkedin for my CV"
   },
   "EduData": [
     {
       "date": "02/2023-Today",
       "icon": "C",
-      "title": "Full stac Devloper Course",
+      "title": "Full Stack Devloper Course",
       "place": "JobLoop- Stavanger",
       "discrption": "KodeHode is a six-month bootcamp course with accompanying six-month internship at a company"
     },

@@ -102,7 +102,7 @@ function Navbar() {
             <Link to="/About">{t("translation.about")}</Link>
           </li>
           <li>
-            <Link to="/Education">{t("translation.education")}</Link>
+            <Link to="/Education">{t("translation.Work/Education")}</Link>
           </li>
           <li>
             <Link to="/Project">{t("translation.Projects")}</Link>
@@ -115,9 +115,11 @@ function Navbar() {
           <li>
             <Link to="/Contact">{t("translation.Contact")}</Link>
           </li>
-          <li>
-            <LanguageSwitch />
-          </li>
+          {expandNavbar ? null : (
+            <li className="language-switch">
+              <LanguageSwitch />
+            </li>
+          )}
         </ul>
       </nav>
       <div className="toggleButton">
