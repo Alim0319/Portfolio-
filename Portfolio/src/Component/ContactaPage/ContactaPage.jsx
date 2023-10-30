@@ -168,8 +168,7 @@ function Contact() {
               <label htmlFor="message">
                 <h3>{t("Contact.Message")}</h3>
               </label>
-              <input
-                type="text"
+              <textarea
                 className="form-control"
                 name="message"
                 id="message"
@@ -196,7 +195,7 @@ function Contact() {
             </button>
           </form>
         </div>
-        <div className="col-md-6 custom-col">
+        <div className="col-md-12 custom-col">
           <img className="contactGift" src={contactImg} alt="contact" />
         </div>
       </div>
