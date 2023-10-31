@@ -180,6 +180,9 @@
   margin-left: 6px;
 }
 
+ul {
+  margin-bottom: 0;
+}
 .navbar .nav-list {
   list-style: none;
   display: flex;
@@ -215,7 +218,9 @@
   font-size: 1.5rem;
   color: var(--textColor);
 }
-
+.nav-list .icon :hover {
+  color: orange;
+}
 /* Change color of the toggle button when expanded */
 .navbar.open .toggleButton button {
   color: transparent;
