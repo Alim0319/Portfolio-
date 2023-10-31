@@ -166,22 +166,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  --bs-navbar-padding-y: 0 !important;
+  padding: 3px 0px 5px 0px;
   background-color: var(--mainColor);
   color: var(--textColor);
+  height: 80px;
 }
 
 .navbar .logo img {
-  height: auto;
-  width: 80px;
+  height: 75px;
   transition: filter 300ms;
+
+  margin-left: 6px;
 }
 
 .navbar .nav-list {
   list-style: none;
   display: flex;
   align-items: center;
-  margin-bottom: 0;
 }
 
 .navbar .nav-list li {
@@ -202,7 +204,7 @@
 .nav-list .icon {
   color: var(--textColor);
   font-size: 1.8rem;
-  margin-bottom: 13px;
+  margin-bottom: 5px;
 }
 
 .navbar .toggleButton button {
@@ -217,7 +219,7 @@
 /* Change color of the toggle button when expanded */
 .navbar.open .toggleButton button {
   color: transparent;
-  max-height: 100px;
+  height: 80px;
   display: flex;
   visibility: hidden;
   transition: max-height 0.3s;
@@ -233,7 +235,6 @@
     height: auto;
     width: 60px;
     transition: filter 300ms;
-    margin-top: 10px;
   }
 
   .navbar.close a {
@@ -241,7 +242,7 @@
   }
 
   .navbar.open {
-    height: 100px;
+    height: 65px;
     display: flex;
     flex-direction: column;
   }
@@ -288,7 +289,7 @@
   }
   @media only screen and (max-width: 650px) {
     .navbar.open {
-      height: 100px;
+      height: 60px;
       display: flex;
       flex-direction: column;
     }
@@ -298,10 +299,11 @@
       margin-top: 5px;
     }
     .navbar .logo img {
-      height: auto;
-      width: 30px;
+      height: 50px;
+      width: 50px;
+
+      margin-top: 2px;
       transition: filter 300ms;
-      margin-top: 25px;
     }
 
     .navbar.open .nav-list {

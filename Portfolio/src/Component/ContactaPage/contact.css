@@ -206,10 +206,11 @@ input[type="text"] {
 }
 
 .contactGift {
-  height: 550px;
+  height: 450px;
   width: auto;
-  display: block;
-  margin-bottom: 60px;
+  display: flex;
+  margin-left: 2px;
+  margin-bottom: 30px;
 }
 .contactGift img {
   width: 100%;
@@ -232,41 +233,19 @@ input[type="text"] {
   /* Make the button width 100% within its container */
 }
 .vertical-timeline-element-content.bounce-in {
-  padding: 0px;
+  padding: 20px !important;
 }
-/*.vertical-timeline--two-columns
-  .vertical-timeline-element
-  .vertical-timeline-element-content {
-  float: none;
-}
-.vertical-timeline--two-columns .vertical-timeline-element-content {
-  margin-left: 0;
-  padding: 5px;
-  width: auto;
-}
-.custom-timeline-element .vertical-timeline-element {
-  margin: 5px;
-}
-.vertical-timeline-element-icon .bounce-in {
-  left: -6px;
-}
-.vertical-timeline-element:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.vertical-timeline-element-icon svg {
-  margin-left: -150px;
-  margin-top: -30px;
-  left: 0;
-  top: 0;
-}
-*/
 
 /* Responsive adjustments */
 .vertical-timeline-element-content {
   box-shadow: none !important;
 }
+.vertical-timeline-element-content {
+  margin-left: 0;
+  padding: 5px;
+  width: auto;
+}
+
 .vertical-timeline-element {
   margin: 0 !important;
 }
@@ -284,7 +263,7 @@ input[type="text"] {
     margin: 10px 0px 10px 0px;
   }
   .col-md-6 form {
-    margin-top: 20px;
+    margin-top: 0px;
   }
 
   .custom-heading {
@@ -293,13 +272,22 @@ input[type="text"] {
   .custom-col {
     width: 50% !important;
   }
+  .form-group {
+    /* Add more spacing between form elements */
+    align-items: center;
+    width: 250px;
+    margin: 0px;
+  }
+  .btn-primary {
+    width: 250px;
+  }
 
   .box .icon {
     font-size: 18px;
     margin-right: 0;
   }
   #message {
-    height: 178px;
+    height: 25px;
   }
   .col-md-6 {
     padding: 10px;
@@ -321,11 +309,27 @@ input[type="text"] {
   }
   @media only screen and (max-width: 1024px) {
     .col-md-6 form {
-      margin-top: 30px;
+      margin-top: 20px;
       margin-left: 50px;
     }
     #message {
-      height: 162px;
+      height: 25px;
+    }
+    .vertical-timeline-element-content.bounce-in {
+      padding: 8px;
+    }
+    .form-group {
+      /* Add more spacing between form elements */
+      align-items: center;
+      width: 150px;
+      margin-top: 30px;
+    }
+    .btn-primary {
+      width: 150px;
+    }
+    .col-md-6 .contactGift {
+      height: 200px;
+      margin-left: 50px;
     }
   }
 }

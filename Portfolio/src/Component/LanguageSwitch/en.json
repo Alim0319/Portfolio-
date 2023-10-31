@@ -35,7 +35,7 @@
     "title": "Contact Me",
     "address": "Address:",
     "phone": "Phone:",
-    "email": "E-mail:",
+    "email": "Email:",
     "fullname": " Full Name *",
     "name": "Name",
     "Message": "Message *",
@@ -44,7 +44,7 @@
     "buttonText": "Send Email"
   },
   "Education": {
-    "title": "Facts About My Educatin and Work",
+    "title": "Facts About My Education and Work",
     "title1": "Welcome 🙂",
     "Cv": "Check my Linkedin for my CV"
   },

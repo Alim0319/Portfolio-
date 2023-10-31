@@ -1,6 +1,6 @@
 .home {
   align-items: center;
-  min-height: 82vh;
+  height: calc(100vh - 160px);
   justify-content: space-between;
   background-color: var(--mainColorLight);
   object-fit: cover;

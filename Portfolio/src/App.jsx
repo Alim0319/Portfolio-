@@ -9,6 +9,7 @@ import Education from "./EdicationAndWork/Edu";
 import { I18nextProvider } from "react-i18next";
 
 import i18n from "./Component/LanguageSwitch/i18n";
+//import Layout from "./Component/Layout/Layout";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
